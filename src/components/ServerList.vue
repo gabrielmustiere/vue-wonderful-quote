@@ -1,8 +1,8 @@
 <template>
   <div>
     <ul class="list-group">
-      <li class="list-group-item" v-for="index in 5">
-        Server #{{ index }}
+      <li class="list-group-item" v-for="index in 5" v-bind:key="index">
+        {{ serverLabel }} - {{ index }}
       </li>
     </ul>
   </div>
@@ -10,10 +10,11 @@
 
 <script>
 export default {
-  name: 'ServerList'
+  name: 'ServerList',
+  data () {
+    return {
+      serverLabel: 'Server'
+    }
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
