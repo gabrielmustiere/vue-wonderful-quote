@@ -13,6 +13,12 @@ module.exports = {
     "import/no-unassigned-import": 0,
     "block-spacing": "off",
     "semi": "off",
+    "vue/html-indent" : ["error", {
+      "attribute": 1,
+      "closeBracket": 1,
+      "alignAttributesVertically": true,
+      "ignores": []
+    }],
     "no-multiple-empty-lines": ["error", {"max": 1, "maxBOF": 1}],
     "padding-line-between-statements": [
       "error",
