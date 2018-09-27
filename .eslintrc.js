@@ -27,7 +27,7 @@ module.exports = {
         "named": "always",
         "asyncArrow": "always"
       }
-    ]
+    ],
   },
   parserOptions: {
     parser: 'babel-eslint'
