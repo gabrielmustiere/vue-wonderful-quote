@@ -1,13 +1,18 @@
 <template>
   <div>
     <header>
-      <h1>Server Status</h1>
+      <h1>{{ title }}</h1>
     </header>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data () {
+    return {
+      details: 'Server Status'
+    }
+  }
 }
 </script>

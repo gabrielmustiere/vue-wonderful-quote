@@ -1,16 +1,17 @@
 <template>
   <div>
-    <p>Server Details are currently not updated</p>
+    <p>{{ details }}</p>
   </div>
 
 </template>
 
 <script>
 export default {
-  name: 'ServerDetails'
+  name: 'ServerDetails',
+  data () {
+    return {
+      details: 'Server Details are currently not updated'
+    }
+  }
 }
 </script>
-
-<style scoped>
-
-</style>

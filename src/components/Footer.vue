@@ -1,13 +1,18 @@
 <template>
   <div>
     <footer>
-      <p>All Servers are managed here</p>
+      <p>{{ title }}</p>
     </footer>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data () {
+    return {
+      details: 'All Servers are managed here'
+    }
+  }
 }
 </script>
