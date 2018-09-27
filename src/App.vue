@@ -1,13 +1,19 @@
 <template>
-  <div id="app">
-    <h1>Hello World</h1>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <app-servers></app-servers>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-export default {}
+import AppServers from './Home'
+
+export default {
+  components: {
+    'app-servers': AppServers
+  }
+}
 </script>
-
-<style lang="scss">
-
-</style>
