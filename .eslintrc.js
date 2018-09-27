@@ -28,6 +28,13 @@ module.exports = {
         "asyncArrow": "always"
       }
     ],
+    "vue/html-indent" : ["error", {
+      "attribute": 1,
+      "closeBracket": 1,
+      "alignAttributesVertically": true,
+      "ignores": []
+    }],
+
   },
   parserOptions: {
     parser: 'babel-eslint'
