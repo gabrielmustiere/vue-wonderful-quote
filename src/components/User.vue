@@ -1,12 +1,12 @@
 <template>
   <div class="jumbotron">
-    <h1>Composant utilisateur</h1>
-    <p>Je suis un incroyable utilisateur !!!</p>
+    <h1>Fiche invocateur</h1>
+    <p>Bonjour invocateur : {{ this.name }}</p>
     <button @click="changeName" class="btn btn-success">Changer mon nom</button>
     <hr>
     <div class="row">
       <div class="col">
-        <user-details :name="name"></user-details>
+        <user-details :name="name" @resetName="name = $event"></user-details>
       </div>
       <div class="col">
         <user-edit></user-edit>
