@@ -1,30 +1,42 @@
 {
   "common": {
     "app": {
-      "title": "La faille de l'invocateur"
+      "title": "la faille de l'invocateur"
     }
   },
   "user": {
-    "title": "Fiche invocateur",
-    "subtitle": "Bonjour invocateur {name}",
+    "title": "fiche invocateur",
+    "subtitle": "bonjour invocateur {name}",
     "changeName": {
       "btn": {
-        "label": "Changer mon nom"
+        "label": "changer mon nom"
       }
     },
     "userDetails": {
-      "title": "Informations d'invocateur",
+      "title": "informations d'invocateur",
       "item": {
         "name": {
-          "label": "Nom"
+          "label": "nom"
+        },
+        "age": {
+          "label": "age"
         }
       },
-      "btn" : {
-        "reinit" :"Ré-initialiser mon nom"
+      "btn": {
+        "reinit": "ré-initialiser mon nom"
       }
     },
     "userEdit": {
-      "title": "Editer l'utilisateur"
+      "title": "editer l'utilisateur",
+      "name": {
+        "label": "nom"
+      },
+      "age": {
+        "label": "age"
+      },
+      "btn": {
+        "changeName": "mettre un autre nom"
+      }
     }
   }
 }

@@ -1,17 +1,18 @@
 <template>
   <div class="jumbotron">
-    <h1>{{ $t('user.title') }}</h1>
-    <p>{{$t('user.subtitle',{name:this.name})}}</p>
-    <button @click="changeName" class="btn btn-success">{{$t('user.changeName.btn.label')}}</button>
+    <h1>{{$ucFirst($t('user.title'))}}</h1>
+    <p>{{$ucFirst($t('user.subtitle',{name: $ucFirst(this.name)}))}}</p>
+    <button @click="changeName" class="btn btn-success">{{$ucFirst($t('user.changeName.btn.label'))}}</button>
     <hr>
     <div class="row">
       <div class="col">
         <user-details :name="name"
+                      :age="age"
                       :resetFn="resetName"
                       @resetName="name = $event"></user-details>
       </div>
       <div class="col">
-        <user-edit></user-edit>
+        <user-edit :name="name" :age="age"></user-edit>
       </div>
     </div>
   </div>
@@ -24,15 +25,16 @@ import UserEdit from './UserEdit'
 export default {
   data () {
     return {
-      name: 'Gabriel'
+      name: 'Gabriel',
+      age: 32
     }
   },
   methods: {
     changeName () {
-      this.name = 'Quentin'
+      this.name = 'quentin'
     },
     resetName () {
-      this.name = 'Gabriel'
+      this.name = 'gabriel'
     }
   },
   components: {
