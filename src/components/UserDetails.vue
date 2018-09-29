@@ -7,6 +7,7 @@
           <li>Nom d'invocateur : {{ name }}</li>
         </ul>
         <button class="btn btn-info" @click="resetName()">Ré-initialiser mon nom</button>
+        <button class="btn btn-info ml-2" @click="resetFn">Ré-initialiser mon nom</button>
       </div>
     </div>
   </div>
@@ -19,7 +20,8 @@ export default {
     name: {
       type: String,
       default: 'Gabriel'
-    }
+    },
+    resetFn: Function
   },
   methods: {
     resetName () {
