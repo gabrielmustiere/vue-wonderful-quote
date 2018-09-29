@@ -1,0 +1,30 @@
+{
+  "common": {
+    "app": {
+      "title": "La faille de l'invocateur"
+    }
+  },
+  "user": {
+    "title": "Fiche invocateur",
+    "subtitle": "Bonjour invocateur {name}",
+    "changeName": {
+      "btn": {
+        "label": "Changer mon nom"
+      }
+    },
+    "userDetails": {
+      "title": "Informations d'invocateur",
+      "item": {
+        "name": {
+          "label": "Nom"
+        }
+      },
+      "btn" : {
+        "reinit" :"Ré-initialiser mon nom"
+      }
+    },
+    "userEdit": {
+      "title": "Editer l'utilisateur"
+    }
+  }
+}

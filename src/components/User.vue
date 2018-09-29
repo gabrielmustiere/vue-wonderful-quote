@@ -1,8 +1,8 @@
 <template>
   <div class="jumbotron">
-    <h1>Fiche invocateur</h1>
-    <p>Bonjour invocateur : {{ this.name }}</p>
-    <button @click="changeName" class="btn btn-success">Changer mon nom</button>
+    <h1>{{ $t('user.title') }}</h1>
+    <p>{{$t('user.subtitle',{name:this.name})}}</p>
+    <button @click="changeName" class="btn btn-success">{{$t('user.changeName.btn.label')}}</button>
     <hr>
     <div class="row">
       <div class="col">

@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-body">
-      User Edit
+      <h5>{{$t('user.userEdit.title')}}</h5>
     </div>
   </div>
 </template>
