@@ -1,7 +1,7 @@
 <template>
   <div class="jumbotron">
     <h1>{{$ucFirst($t('user.title'))}}</h1>
-    <p>{{$ucFirst($t('user.subtitle',{name: $ucFirst(this.name)}))}}</p>
+    <p>{{$ucFirst($t('user.subtitle',{name: $ucFirst(this.name), age: this.age}))}}</p>
     <button @click="changeName" class="btn btn-success">{{$ucFirst($t('user.changeName.btn.label'))}}</button>
     <hr>
     <div class="row">
@@ -9,10 +9,13 @@
         <user-details :name="name"
                       :age="age"
                       :resetFn="resetName"
-                      @resetName="name = $event"></user-details>
+                      @resetName="name = $event">
+
+        </user-details>
       </div>
       <div class="col">
-        <user-edit :name="name" :age="age"></user-edit>
+        <user-edit :name="name" :age="age" @ageUpdated="age = $event">
+        </user-edit>
       </div>
     </div>
   </div>

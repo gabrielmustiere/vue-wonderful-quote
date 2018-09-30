@@ -6,7 +6,7 @@
   },
   "user": {
     "title": "fiche invocateur",
-    "subtitle": "bonjour invocateur {name}",
+    "subtitle": "bonjour invocateur {name} ({age})",
     "changeName": {
       "btn": {
         "label": "changer mon nom"
@@ -35,7 +35,8 @@
         "label": "age"
       },
       "btn": {
-        "changeName": "mettre un autre nom"
+        "changeName": "mettre un autre nom",
+        "changeAge": "Ajouter 10 ans"
       }
     }
   }
