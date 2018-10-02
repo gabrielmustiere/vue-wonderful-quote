@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="card-body">
-      <form action="">
+      <form action="#" v-on:submit.prevent="onSubmit">
 
         <div class="form-group">
           <label for="marque">Marque</label>
@@ -27,7 +27,10 @@
           <input type="text" class="form-control" id="modele" placeholder="308 GT-Line 120ch..." v-model="model">
         </div>
 
-        <button class="btn btn-success" :disabled="disabled">Ajouter le véhicule à ma liste</button>
+        <button class="btn" type="submit" :class="[{'btn-success' : !this.disabled, 'btn-light' : this.disabled}]" :disabled="disabled">
+          <font-awesome-icon v-if="disabled" icon="ban" class="mr-2"/>
+          <font-awesome-icon v-else icon="check" class="mr-2"/>
+          Ajouter le véhicule à ma liste</button>
 
       </form>
     </div>
@@ -48,16 +51,20 @@ export default {
       disabled: true
     }
   },
-  computed: {
-
+  methods: {
+    onSubmit (event) {
+      this.$emit('addedCar', [this.selectedBrand, this.model])
+    }
   },
   watch: {
-    selectedBrand: function (brand) {
-      if (brand) {
+    selectedBrand: function (brand, oldBrand) {
+      if (brand && oldBrand.length === 0) {
         this.progressBarWidth += 50
+        this.selectedBrand = brand
         return
       }
       this.progressBarWidth -= 50
+      this.selectedBrand = brand
     },
     model: function (model, oldModel) {
       if (model.length > 0 && oldModel.length === 0) {
@@ -80,5 +87,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

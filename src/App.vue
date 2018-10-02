@@ -22,6 +22,7 @@
         </div>
         <div class="col">
           <h3>Ma liste</h3>
+          <vehicle-list></vehicle-list>
         </div>
       </div>
     </div>
@@ -31,10 +32,13 @@
 
 <script>
 import VehicleForm from './components/VehicleForm'
+import VehicleList from './components/VehicleList'
 
 export default {
   components: {
-    VehicleForm
+    VehicleForm,
+    VehicleList
+
   }
 }
 
