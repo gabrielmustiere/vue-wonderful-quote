@@ -3,8 +3,12 @@
     <div class="card-header">
       <h6>Progression de ma saisie :</h6>
       <div class="progress">
-        <div class="progress-bar" role="progressbar" :style="{width: progressBarWidth+ '%'}" :aria-valuenow="progressBarWidth"
-             aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar"
+             :class="[{'bg-success' : progressBarWidth === 100}]"
+             :style="{width: progressBarWidth+ '%'}"
+             :aria-valuenow="progressBarWidth"
+             role="progressbar"
+             aria-valuemin="0" aria-valuemax="100">{{progressBarWidth}}%</div>
       </div>
     </div>
     <div class="card-body">
@@ -44,10 +48,8 @@ export default {
       disabled: true
     }
   },
-  methods: {
-    getProgressBarWidth: function () {
-      return 30
-    }
+  computed: {
+
   },
   watch: {
     selectedBrand: function (brand) {
@@ -57,12 +59,14 @@ export default {
       }
       this.progressBarWidth -= 50
     },
-    model: function (model) {
-      if (model.length > 0 && this.model.length > 0) {
+    model: function (model, oldModel) {
+      if (model.length > 0 && oldModel.length === 0) {
         this.progressBarWidth += 50
-        return
       }
-      this.progressBarWidth -= 50
+
+      if (model.length === 0 && oldModel.length > 0) {
+        this.progressBarWidth -= 50
+      }
     },
     progressBarWidth: function (progressBarWidth) {
       if (progressBarWidth < 100) {
