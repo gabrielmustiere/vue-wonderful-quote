@@ -22,7 +22,7 @@
         </div>
         <div class="col">
           <h3>Ma liste</h3>
-          <vehicle-list></vehicle-list>
+          <vehicle-list :vehicles="vehicles"></vehicle-list>
         </div>
       </div>
     </div>
@@ -39,6 +39,15 @@ export default {
     VehicleForm,
     VehicleList
 
+  },
+  data: function () {
+    return {
+      vehicles: [
+        { 'brand': 'Renault', 'model': 'Megane III Distiction 120 ch 5P' },
+        { 'brand': 'Peugeot', 'model': '3008 GT-Line 150 ch 5P' }
+      ]
+
+    }
   }
 }
 
