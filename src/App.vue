@@ -20,7 +20,7 @@ export default {
   },
   data () {
     return {
-      quoteTitle: '" Tu sors ou je te sort !? "'
+      quoteTitle: '" Tu sors ou je te sors !? "'
     }
   }
 

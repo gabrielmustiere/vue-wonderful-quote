@@ -11,11 +11,12 @@
 </template>
 
 <script>
+import Format from 'date-fns/format'
 export default {
   name: 'Quote',
   data () {
     return {
-      date: new Date()
+      date: Format(new Date(), 'DD/MM/YYYY')
     }
   }
 }
