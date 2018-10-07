@@ -1,12 +1,23 @@
 <template>
   <div>
-    <slot/>
+    <div class="title">
+      <slot name="title"/>
+    </div>
+    <hr>
+    <div class="content">
+      <slot name="content">Auteur par défault - {{ date }}</slot>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Quote'
+  name: 'Quote',
+  data () {
+    return {
+      date: new Date()
+    }
+  }
 }
 </script>
 
@@ -19,4 +30,7 @@ export default {
     text-align: center;
   }
 
+  .title {
+    font-style: italic;
+  }
 </style>

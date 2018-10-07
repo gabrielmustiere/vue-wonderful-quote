@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col mt-3">
         <quote>
-          <blockquote>{{ quoteTitle }}</blockquote>
+          <p slot="title">{{ quoteTitle }}</p>
           <cite>Claudy Faucan - 2006</cite>
         </quote>
       </div>
