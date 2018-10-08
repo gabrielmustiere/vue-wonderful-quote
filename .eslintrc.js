@@ -4,7 +4,7 @@ module.exports = {
     node: true
   },
   'extends': [
-    'plugin:vue/recommended',
+    'plugin:vue/strongly-recommended',
     'plugin:vue/essential',
     '@vue/standard'
   ],
@@ -35,7 +35,7 @@ module.exports = {
       "alignAttributesVertically": true,
       "ignores": []
     }],
-
+    "vue/html-self-closing": ["never"]
   },
   parserOptions: {
     parser: 'babel-eslint'
